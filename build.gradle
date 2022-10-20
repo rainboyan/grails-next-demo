@@ -5,10 +5,10 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsGradlePluginVersion"
-        classpath "org.grails.plugins:hibernate5:7.2.2"
-        classpath "org.grails.plugins:views-gradle:2.3.1"
-        classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:2.6"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:3.3.4"
+        classpath "org.grails.plugins:hibernate5:7.2.3-SNAPSHOT"
+        classpath "org.grails.plugins:views-gradle:2.3.2"
+        classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:2.7"
+        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:3.4.7.v20220929"
     }
 }
 
@@ -39,7 +39,8 @@ configurations {
 dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     compileOnly "io.micronaut:micronaut-inject-groovy"
-    implementation "io.micronaut.spring:micronaut-spring-context:$micronautSpringVersion"
+    // implementation "io.micronaut.spring:micronaut-spring-context:$micronautSpringVersion"
+    // implementation "javax.persistence:javax.persistence-api:2.2"
     console "org.grails:grails-console"
     implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation "org.springframework.boot:spring-boot-starter-validation"
@@ -59,7 +60,7 @@ dependencies {
     implementation "org.grails.plugins:async"
     implementation "org.grails.plugins:scaffolding"
     implementation "org.grails.plugins:hibernate5"
-    implementation "org.hibernate:hibernate-core:5.6.5.Final"
+    implementation "org.hibernate:hibernate-core:5.6.11.Final"
     implementation "org.grails.plugins:events"
     implementation "org.grails.plugins:gsp"
     implementation "org.grails.plugins:views-json"
@@ -68,7 +69,7 @@ dependencies {
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
     runtimeOnly "javax.xml.bind:jaxb-api:2.3.1"
-    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:3.3.4"
+    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:3.4.7.v20220929"
     testImplementation "io.micronaut:micronaut-inject-groovy"
     testImplementation "org.grails:grails-gorm-testing-support"
     testImplementation "org.mockito:mockito-core"
